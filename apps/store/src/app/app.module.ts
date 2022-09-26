@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MatCardModule } from '@angular/material/card';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
@@ -25,6 +26,7 @@ import { StoreUtilFormattersModule } from '@bg-hoard/store/util-formatters';
       ],
       { initialNavigation: 'enabledBlocking' }
     ),
+    HttpClientModule,
     MatCardModule,
     StoreUiSharedModule,
     StoreUtilFormattersModule,
