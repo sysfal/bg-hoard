@@ -13,7 +13,18 @@ import { StoreUtilFormattersModule } from '@bg-hoard/store/util-formatters';
   declarations: [AppComponent, NxWelcomeComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
+    RouterModule.forRoot(
+      [
+        {
+          path: 'game/:id',
+          loadChildren: () =>
+            import('@bg-hoard/store/feature-game-detail').then(
+              (m) => m.StoreFeatureGameDetailModule
+            ),
+        },
+      ],
+      { initialNavigation: 'enabledBlocking' }
+    ),
     MatCardModule,
     StoreUiSharedModule,
     StoreUtilFormattersModule,
