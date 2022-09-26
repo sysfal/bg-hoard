@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
 import { StoreUtilFormattersModule } from '@bg-hoard/store/util-formatters';
+import { ApiUtilInterfaceModule } from '@bg-hoard/util-interface';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -30,6 +31,7 @@ import { StoreUtilFormattersModule } from '@bg-hoard/store/util-formatters';
     MatCardModule,
     StoreUiSharedModule,
     StoreUtilFormattersModule,
+    ApiUtilInterfaceModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
