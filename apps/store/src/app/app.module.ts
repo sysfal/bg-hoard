@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
+import { StoreUtilFormattersModule } from '@bg-hoard/store/util-formatters';
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -15,6 +16,7 @@ import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
     RouterModule.forRoot([], { initialNavigation: 'enabledBlocking' }),
     MatCardModule,
     StoreUiSharedModule,
+    StoreUtilFormattersModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
