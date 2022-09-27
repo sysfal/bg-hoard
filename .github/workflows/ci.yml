@@ -8,5 +8,5 @@ jobs:
     name: Testing affected apps
     steps:
       - uses: actions/checkout@v2
-      - run: npm install
-      - run: npx nx affected:test
+      - uses: bahmutov/npm-install@v1
+      - run: npx nx affected:test --base=origin/main
