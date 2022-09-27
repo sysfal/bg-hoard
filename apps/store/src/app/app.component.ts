@@ -3,6 +3,8 @@ import { formatRating } from '@bg-hoard/store/util-formatters';
 import { HttpClient } from '@angular/common/http';
 import { Game } from '@bg-hoard/util-interface';
 
+console.log('test');
+
 @Component({
   selector: 'bg-hoard-root',
   templateUrl: './app.component.html',
@@ -10,8 +12,6 @@ import { Game } from '@bg-hoard/util-interface';
 })
 export class AppComponent {
   constructor(private http: HttpClient) {}
-
-  console.log('test');
 
   title = 'Board Game Hoard';
   formatRating = formatRating;
