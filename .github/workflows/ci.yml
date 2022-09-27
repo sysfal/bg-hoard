@@ -1,4 +1,4 @@
-name: Run CI checks # The name will show up on the GitHub Actions dashboard
+name: Run CI checks # The name will show up on the GitHub Actions dashboard sdvusdhvus
 
 on: [pull_request] # This workflow will run only on Pull Requests
 
@@ -8,5 +8,7 @@ jobs:
     name: Testing affected apps
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - run: npm install
-      - run: npx nx affected:test
+      - run: npx nx affected:test --base=origin/main
