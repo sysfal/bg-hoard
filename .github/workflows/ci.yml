@@ -8,7 +8,5 @@ jobs:
     name: Testing affected apps
     steps:
       - uses: actions/checkout@v2
-      - run: git show-ref master
-      - run: git show-ref --verify refs/origin/master
       - run: npm install
-      - run: npx nx affected:test --base=master
+      - run: npx nx affected:test
